@@ -375,7 +375,7 @@ h1, h2, h3 {
   scroll-snap-align: start; border-radius: var(--radius); overflow: hidden;
   background: var(--graphite-2); box-shadow: var(--shadow); position: relative;
 }
-.case-gallery img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform .5s ease; }
+.case-gallery img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; transition: transform .5s ease; }
 .case-gallery figure:hover img { transform: scale(1.05); }
 .case-gallery figcaption {
   position: absolute; inset: auto 0 0 0; padding: 34px 16px 14px;
