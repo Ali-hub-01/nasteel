@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://nasteel.kz/</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://nasteel.kz/</loc></url>
+  <url><loc>https://nasteel.kz/stellazhi-palletnye.html</loc></url>
+  <url><loc>https://nasteel.kz/stellazhi-mezoninnye.html</loc></url>
+  <url><loc>https://nasteel.kz/stellazhi-srednegruzovye.html</loc></url>
+  <url><loc>https://nasteel.kz/stellazhi-konsolnye.html</loc></url>
+  <url><loc>https://nasteel.kz/stellazhi-torgovye.html</loc></url>
+  <url><loc>https://nasteel.kz/stellazhi-polochnye-zacep.html</loc></url>
+  <url><loc>https://nasteel.kz/stellazhi-polochnye-oblegchennye.html</loc></url>
+  <url><loc>https://nasteel.kz/seyfy.html</loc></url>
+  <url><loc>https://nasteel.kz/bronedveri.html</loc></url>
+  <url><loc>https://nasteel.kz/bankovskoe.html</loc></url>
+  <url><loc>https://nasteel.kz/mebel.html</loc></url>
+  <url><loc>https://nasteel.kz/samonesushchie-sklady.html</loc></url>
+  <url><loc>https://nasteel.kz/uslugi.html</loc></url>
 </urlset>

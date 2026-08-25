@@ -40,11 +40,49 @@
     burger.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
   nav.addEventListener('click', function (e) {
-    if (e.target.tagName === 'A') {
+    if (e.target.closest('a')) {
       nav.classList.remove('open');
       burger.classList.remove('open');
       burger.setAttribute('aria-expanded', 'false');
+      closeDropdowns();
     }
+  });
+
+  /* ================= Выпадающее меню «Каталог» ================= */
+  function closeDropdowns(except) {
+    document.querySelectorAll('.nav-dd.open, .nav-sub.open').forEach(function (el) {
+      if (except && (el === except || el.contains(except))) return;
+      el.classList.remove('open');
+      var b = el.querySelector('.nav-dd-btn, .nav-sub-btn');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  }
+  document.querySelectorAll('.nav-dd-btn, .nav-sub-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var wrap = btn.parentElement;
+      var open = wrap.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) closeDropdowns(wrap);
+      else wrap.querySelectorAll('.open').forEach(function (el) {
+        el.classList.remove('open');
+        var b = el.querySelector('[aria-expanded]');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.nav-dd')) closeDropdowns();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeDropdowns();
+  });
+
+  /* ================= WhatsApp-ссылки с названием товара ================= */
+  document.querySelectorAll('[data-wa-product]').forEach(function (a) {
+    var msg = 'Здравствуйте! Пишу с сайта nasteel.kz. Интересует: ' +
+      a.getAttribute('data-wa-product') + '. Подскажите, пожалуйста, цену и сроки.';
+    a.setAttribute('href', 'https://wa.me/77005450520?text=' + encodeURIComponent(msg));
   });
 
   /* ================= Мультилендинг: подмена H1 по ?key= ================= */
@@ -255,7 +293,7 @@
         data.comment ? 'Комментарий: ' + data.comment : '',
         data.file ? 'Чертёж (дошлю файлом): ' + data.file : ''
       ].filter(Boolean);
-      waFallback.href = 'https://wa.me/77011547720?text=' + encodeURIComponent(lines.join('\n'));
+      waFallback.href = 'https://wa.me/77005450520?text=' + encodeURIComponent(lines.join('\n'));
 
       form.querySelectorAll('.form-row, label, .form-submit, .form-note').forEach(function (el) {
         el.style.display = 'none';
