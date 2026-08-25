@@ -315,6 +315,18 @@ h1, h2, h3 {
 .prod-row:hover .prod-n { color: rgba(31,111,224,.55); }
 .prod-row-otk .prod-ic-wrap { background: var(--accent); color: #fff; border-color: var(--accent); }
 .prod-row-otk .prod-n { color: rgba(31,111,224,.5); }
+
+/* ---------- Производство: фото + цифры ---------- */
+.prod-showcase { position: relative; z-index: 1; display: grid; gap: 26px; align-items: center; }
+@media (min-width: 900px) { .prod-showcase { grid-template-columns: 1.1fr 0.9fr; gap: 40px; } }
+.prod-gallery { display: grid; gap: 14px; }
+.prod-gallery img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--radius); display: block; border: 1px solid rgba(255,255,255,.08); }
+.prod-stats { list-style: none; display: grid; }
+.prod-stats li { padding: 16px 2px; border-bottom: 1px solid rgba(255,255,255,.1); }
+.prod-stats li:first-child { border-top: 1px solid rgba(255,255,255,.1); }
+.prod-stats b { display: block; font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3vw, 34px); color: #fff; line-height: 1; letter-spacing: .01em; }
+.prod-stats span { display: block; font-size: 14px; color: #9aa6b8; margin-top: 6px; }
+@media (max-width: 560px) { .prod-stats b { font-size: 24px; } .prod-stats li { padding: 14px 2px; } }
 @media (max-width: 560px) {
   .prod-row { gap: 14px; padding: 20px 2px; }
   .prod-ic-wrap { width: 40px; height: 40px; }
