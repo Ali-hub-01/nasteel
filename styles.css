@@ -228,6 +228,9 @@ h1, h2, h3 {
 .catalog-grid { display: grid; gap: 22px; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .catalog-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1080px) { .catalog-grid { grid-template-columns: repeat(3, 1fr); } }
+/* пара карт (склады) занимает всю ширину ряда, делится на 2 равные колонки */
+.cat-pair { grid-column: 1 / -1; display: grid; gap: 22px; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .cat-pair { grid-template-columns: repeat(2, 1fr); } }
 
 .cat-card {
   display: flex; flex-direction: column; background: var(--graphite-2);
