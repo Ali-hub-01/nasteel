@@ -446,7 +446,7 @@ h1, h2, h3 {
 /* ---------- Docs ---------- */
 .docs-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
 @media (min-width: 640px) { .docs-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1080px) { .docs-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1080px) { .docs-grid { grid-template-columns: repeat(3, 1fr); } }
 .doc-card {
   border: 1px solid #dee4ec; border-radius: var(--radius); padding: 24px;
   display: flex; flex-direction: column; gap: 10px; background: var(--paper);
