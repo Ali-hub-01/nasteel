@@ -772,3 +772,31 @@ a.footer-line:hover { color: var(--accent-2); }
 .service-body .cat-list { color: #c6cfdc; }
 .service-body .btn { margin-top: auto; align-self: flex-start; background: rgba(47, 123, 255, .14); border: 1px solid rgba(47, 123, 255, .5); color: #cfe0ff; }
 .service-body .btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* ===== CTA в списке производственных показателей ===== */
+.prod-stats .prod-cta { border-bottom: 0; padding-top: 20px; }
+.prod-stats .prod-cta .btn { width: 100%; text-align: center; justify-content: center; }
+
+/* ===== Ряд реальных сертификатов ===== */
+.certs-block { margin-top: 40px; }
+.certs-title { font-family: var(--font-head, 'Oswald', sans-serif); font-size: clamp(20px, 2.4vw, 26px); margin: 0 0 6px; }
+.certs-sub { color: #5a6472; font-size: 15px; max-width: 72ch; margin: 0 0 20px; }
+.certs-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.cert-thumb { padding: 0; margin: 0; border: 1px solid rgba(20,30,50,.12); background: #fff; border-radius: 10px; overflow: hidden; cursor: zoom-in; box-shadow: 0 6px 20px rgba(20,30,50,.08); transition: transform .25s ease, box-shadow .25s ease; }
+.cert-thumb:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(20,30,50,.18); }
+.cert-thumb img { display: block; width: 100%; height: 240px; object-fit: cover; object-position: top center; }
+@media (max-width: 900px) { .certs-row { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .certs-row { grid-template-columns: repeat(2, 1fr); gap: 10px; } .cert-thumb img { height: 190px; } }
+
+/* ===== Лайтбокс сертификатов ===== */
+.cert-lb { position: fixed; inset: 0; z-index: 2000; background: rgba(8,12,20,.93); display: flex; align-items: center; justify-content: center; padding: 40px; opacity: 0; transition: opacity .2s ease; }
+.cert-lb[hidden] { display: none; }
+.cert-lb.open { opacity: 1; }
+.cert-lb__img { max-width: min(94vw, 900px); max-height: 90vh; object-fit: contain; border-radius: 6px; background: #fff; box-shadow: 0 24px 70px rgba(0,0,0,.55); }
+.cert-lb__close, .cert-lb__nav { position: absolute; color: #fff; background: rgba(255,255,255,.14); border: 0; border-radius: 50%; cursor: pointer; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background .2s ease; }
+.cert-lb__close:hover, .cert-lb__nav:hover { background: rgba(255,255,255,.28); }
+.cert-lb__close { top: 18px; right: 22px; width: 46px; height: 46px; font-size: 30px; }
+.cert-lb__nav { top: 50%; transform: translateY(-50%); width: 54px; height: 54px; font-size: 36px; }
+.cert-lb__prev { left: 20px; }
+.cert-lb__next { right: 20px; }
+@media (max-width: 560px) { .cert-lb { padding: 16px; } .cert-lb__nav { width: 44px; height: 44px; font-size: 30px; } .cert-lb__prev { left: 8px; } .cert-lb__next { right: 8px; } }

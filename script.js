@@ -303,3 +303,37 @@
     });
   }
 })();
+
+/* ===== Лайтбокс сертификатов ===== */
+(function () {
+  var thumbs = Array.prototype.slice.call(document.querySelectorAll('.cert-thumb'));
+  var lb = document.getElementById('certLb');
+  if (!thumbs.length || !lb) return;
+  var img = lb.querySelector('.cert-lb__img');
+  var srcs = thumbs.map(function (t) { return t.getAttribute('data-full'); });
+  var idx = 0;
+  function show(i) {
+    idx = (i + srcs.length) % srcs.length;
+    img.src = srcs[idx];
+    lb.removeAttribute('hidden');
+    requestAnimationFrame(function () { lb.classList.add('open'); });
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lb.classList.remove('open');
+    lb.setAttribute('hidden', '');
+    img.src = '';
+    document.body.style.overflow = '';
+  }
+  thumbs.forEach(function (t, i) { t.addEventListener('click', function () { show(i); }); });
+  lb.querySelector('.cert-lb__close').addEventListener('click', close);
+  lb.querySelector('.cert-lb__prev').addEventListener('click', function (e) { e.stopPropagation(); show(idx - 1); });
+  lb.querySelector('.cert-lb__next').addEventListener('click', function (e) { e.stopPropagation(); show(idx + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hasAttribute('hidden')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(idx - 1);
+    else if (e.key === 'ArrowRight') show(idx + 1);
+  });
+})();

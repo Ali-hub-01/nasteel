@@ -31,7 +31,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="preload" as="image" href="assets/hero-weld.webp" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=6">
 
 <script type="application/ld+json">
 {
@@ -45,7 +45,7 @@
       "logo": "https://nasteel.kz/assets/og-image.png",
       "foundingDate": "2005",
       "taxID": "200540013962",
-      "email": "l.k.w@mail.ru",
+      "email": "info@nasteel.kz",
       "telephone": "+77005450520",
       "sameAs": []
     },
@@ -57,7 +57,7 @@
       "image": "https://nasteel.kz/assets/og-image.png",
       "url": "https://nasteel.kz/",
       "telephone": "+77005450520",
-      "email": "l.k.w@mail.ru",
+      "email": "info@nasteel.kz",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -311,14 +311,10 @@
           <li><b>с 2005</b><span>работали под прежним брендом LKW</span></li>
           <li><b>26 000</b><span>реализовано проектов по всему РК</span></li>
           <li><b>80+</b><span>сотрудников</span></li>
-          <li><b>2</b><span>автоматические линии проката</span></li>
+          <li class="prod-cta"><a class="btn btn-accent" href="#raschet" data-track="cta" data-cta="production">Получить расчёт от завода</a></li>
         </ul>
       </div>
 
-      <div class="prod-note reveal">
-        <p>Собственное сырьё, собственные линии, собственная логистика. Никаких посредников: вы работаете напрямую с заводом-производителем.</p>
-        <a class="btn btn-accent" href="#raschet" data-track="cta" data-cta="production">Получить расчёт от завода</a>
-      </div>
     </div>
   </section>
 
@@ -374,12 +370,6 @@
       </div>
       <div class="docs-grid">
         <article class="doc-card reveal">
-          <span class="doc-mark">СТ-KZ</span>
-          <h3>Сертификат СТ-KZ</h3>
-          <p>Подтверждённое казахстанское содержание. Допуск к госзакупкам и тендерам «Самрук-Казына».</p>
-          <a href="#" class="doc-link" data-track="doc" data-doc="st-kz">Посмотреть PDF</a>
-        </article>
-        <article class="doc-card reveal">
           <span class="doc-mark">ГОСТ</span>
           <h3>Соответствие ГОСТ</h3>
           <p>Конструкции и покрытия соответствуют действующим ГОСТ на стеллажное оборудование и металлоизделия.</p>
@@ -397,6 +387,18 @@
           <p>Прямая гарантия производителя на конструкцию, сварные швы и покрытие изделий.</p>
           <a href="#" class="doc-link" data-track="doc" data-doc="warranty">Условия гарантии</a>
         </article>
+      </div>
+
+      <div class="certs-block reveal">
+        <h3 class="certs-title">Сертификат СТ-KZ</h3>
+        <p class="certs-sub">Подтверждённое казахстанское содержание. Допуск к госзакупкам и тендерам «Самрук-Казына». Нажмите на лист, чтобы открыть в увеличенном виде.</p>
+        <div class="certs-row">
+          <button type="button" class="cert-thumb" data-full="assets/certs/cert-1.webp" aria-label="Сертификат СТ-KZ, лист 1"><img src="assets/certs/cert-1.webp" alt="Сертификат СТ-KZ NASTEEL, лист 1" loading="lazy" decoding="async"></button>
+          <button type="button" class="cert-thumb" data-full="assets/certs/cert-2.webp" aria-label="Сертификат СТ-KZ, лист 2"><img src="assets/certs/cert-2.webp" alt="Сертификат СТ-KZ NASTEEL, лист 2" loading="lazy" decoding="async"></button>
+          <button type="button" class="cert-thumb" data-full="assets/certs/cert-3.webp" aria-label="Сертификат СТ-KZ, лист 3"><img src="assets/certs/cert-3.webp" alt="Сертификат СТ-KZ NASTEEL, лист 3" loading="lazy" decoding="async"></button>
+          <button type="button" class="cert-thumb" data-full="assets/certs/cert-4.webp" aria-label="Сертификат СТ-KZ, лист 4"><img src="assets/certs/cert-4.webp" alt="Сертификат СТ-KZ NASTEEL, лист 4" loading="lazy" decoding="async"></button>
+          <button type="button" class="cert-thumb" data-full="assets/certs/cert-5.webp" aria-label="Сертификат СТ-KZ, лист 5"><img src="assets/certs/cert-5.webp" alt="Сертификат СТ-KZ NASTEEL, лист 5" loading="lazy" decoding="async"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -480,8 +482,7 @@
             <svg class="ic" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.4.7c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3 0 .2 0 .7-.2 1.1z" fill="currentColor"/></svg>
             WhatsApp: +7 700 545 05 20
           </a>
-          <p class="footer-line footer-muted">Евсеева Елена, руководитель отдела продаж</p>
-          <a class="footer-line" href="mailto:l.k.w@mail.ru" data-track="email"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>l.k.w@mail.ru</a>
+          <a class="footer-line" href="mailto:info@nasteel.kz" data-track="email"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>info@nasteel.kz</a>
           <p class="footer-line footer-muted">Тендерный отдел: заявки и документация на этот же email</p>
           <p class="footer-line footer-muted">ПН-ПТ, с 08:00 до 17:00</p>
         </div>
@@ -520,6 +521,13 @@
   <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.4.7c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3 0 .2 0 .7-.2 1.1z" fill="currentColor"/></svg>
 </a>
 
-<script src="script.js?v=5" defer></script>
+<div class="cert-lb" id="certLb" hidden>
+  <button type="button" class="cert-lb__close" aria-label="Закрыть">&times;</button>
+  <button type="button" class="cert-lb__nav cert-lb__prev" aria-label="Предыдущий лист">&lsaquo;</button>
+  <img class="cert-lb__img" src="" alt="Сертификат СТ-KZ, увеличенный вид">
+  <button type="button" class="cert-lb__nav cert-lb__next" aria-label="Следующий лист">&rsaquo;</button>
+</div>
+
+<script src="script.js?v=6" defer></script>
 </body>
 </html>
