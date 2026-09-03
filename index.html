@@ -30,7 +30,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="preload" as="image" href="assets/hero-weld.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero-prod.jpg" fetchpriority="high">
 <link rel="stylesheet" href="styles.css?v=7">
 
 <script type="application/ld+json">
@@ -138,10 +138,9 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
-    <picture class="hero-bg" aria-hidden="true">
-      <source media="(max-width: 700px)" srcset="assets/hero-weld-m.webp">
-      <img src="assets/hero-weld.webp" alt="" fetchpriority="high" decoding="async">
-    </picture>
+    <video class="hero-bg" autoplay muted loop playsinline preload="metadata" poster="assets/hero-prod.jpg" aria-hidden="true">
+      <source src="assets/hero-prod.mp4" type="video/mp4">
+    </video>
     <div class="hero-veil" aria-hidden="true"></div>
     <div class="hero-grid" aria-hidden="true"></div>
 
