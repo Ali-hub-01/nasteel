@@ -801,3 +801,9 @@ a.footer-line:hover { color: var(--accent-2); }
 .cert-lb__prev { left: 20px; }
 .cert-lb__next { right: 20px; }
 @media (max-width: 560px) { .cert-lb { padding: 16px; } .cert-lb__nav { width: 44px; height: 44px; font-size: 30px; } .cert-lb__prev { left: 8px; } .cert-lb__next { right: 8px; } }
+
+/* Блок производства: колонка галерея + кнопка видео */
+.prod-gallery-col { display: flex; flex-direction: column; gap: 18px; }
+.prod-video-btn { align-self: flex-start; gap: 9px; }
+.prod-video-btn svg { flex: none; }
+@media (max-width: 900px) { .prod-video-btn { align-self: stretch; justify-content: center; } }
