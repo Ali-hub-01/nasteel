@@ -819,6 +819,13 @@ a.footer-line:hover { color: var(--accent-2); }
 @media (min-width: 720px) { .page-stats { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1080px) { .page-stats { grid-template-columns: repeat(6, 1fr); } }
 
-/* ============ Каталог стеллажей: пояснение по стоимости (низ страницы) ============ */
-.price-note { padding-top: clamp(30px, 4vw, 44px); padding-bottom: clamp(30px, 4vw, 44px); }
-.price-note__text { max-width: 90ch; color: #566173; font-size: 15px; line-height: 1.7; font-weight: 500; }
+/* ============ Каталог стеллажей: пояснение по стоимости (в тёмной CTA-секции) ============ */
+.price-note {
+  max-width: 940px; margin: 0 auto clamp(30px, 4vw, 44px); text-align: center;
+  padding-bottom: clamp(28px, 4vw, 40px); border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.price-note__title { color: #fff; font-size: clamp(21px, 3vw, 29px); font-weight: 700; margin-top: 10px; }
+.price-note__text {
+  max-width: 74ch; margin: 16px auto 0; color: #aeb8c6;
+  font-size: 15.5px; line-height: 1.7; font-weight: 500;
+}
