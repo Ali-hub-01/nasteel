@@ -807,3 +807,18 @@ a.footer-line:hover { color: var(--accent-2); }
 .prod-video-btn { align-self: flex-start; gap: 9px; }
 .prod-video-btn svg { flex: none; }
 @media (max-width: 900px) { .prod-video-btn { align-self: stretch; justify-content: center; } }
+
+/* ============ Видео-кнопка сверху блока статистики производства (главная) ============ */
+.prod-stats .prod-cta--top { border-top: 0; border-bottom: 1px solid rgba(255,255,255,.1); padding-top: 0; padding-bottom: 20px; }
+.prod-stats .prod-cta--top .btn { width: 100%; text-align: center; justify-content: center; }
+
+/* ============ Каталог: видео-кнопка + блок показателей завода в page-hero ============ */
+.page-video-btn { display: inline-flex; align-items: center; gap: 9px; margin-top: 26px; }
+.page-video-btn svg { flex: none; }
+.page-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 12px; margin-top: 32px; }
+@media (min-width: 720px) { .page-stats { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1080px) { .page-stats { grid-template-columns: repeat(6, 1fr); } }
+
+/* ============ Каталог стеллажей: пояснение по стоимости (низ страницы) ============ */
+.price-note { padding-top: clamp(30px, 4vw, 44px); padding-bottom: clamp(30px, 4vw, 44px); }
+.price-note__text { max-width: 90ch; color: #566173; font-size: 15px; line-height: 1.7; font-weight: 500; }
