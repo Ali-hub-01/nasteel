@@ -881,8 +881,22 @@ a.footer-line:hover { color: var(--accent-2); }
 .article__body .kb-list { margin-bottom: 20px; gap: 12px; }
 .article__body .kb-list li { font-weight: 500; font-size: 15.5px; line-height: 1.6; }
 .article__body .kb-list li b { color: var(--ink); font-weight: 700; }
-.mez-inline { margin: 28px 0; border-radius: 16px; overflow: hidden; box-shadow: 0 22px 54px -26px rgba(0,0,0,.45); }
-.mez-inline img { width: 100%; height: auto; max-height: 520px; object-fit: cover; display: block; }
+.mez-inline { margin: 30px auto; max-width: 560px; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 22px 54px -26px rgba(0,0,0,.45); }
+.mez-inline img { width: 100%; height: auto; display: block; }
 .article__cta-note { background: var(--paper-2); border-left: 3px solid var(--accent); border-radius: 12px;
   padding: 16px 20px; color: var(--ink-soft); }
 .article__cta-note b { color: var(--ink); }
+
+/* ============ Проекты: автопрокрутка (marquee) без полосы, фото целиком ============ */
+.proj-marquee { overflow: hidden; padding: 4px 0 6px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+.proj-marquee__track { display: flex; gap: 16px; width: max-content;
+  animation-name: projScroll; animation-timing-function: linear; animation-iteration-count: infinite; }
+.proj-marquee:hover .proj-marquee__track { animation-play-state: paused; }
+.proj-marquee__track img { flex: 0 0 auto; height: 440px; width: auto; border-radius: 14px;
+  object-fit: cover; box-shadow: 0 18px 44px -22px rgba(0,0,0,.55); }
+@keyframes projScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .proj-marquee__track { animation: none; } .proj-marquee { overflow-x: auto; } }
+@media (max-width: 560px) { .proj-marquee__track img { height: 320px; } }
