@@ -3,6 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) - Google Ads AW-800300971 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-800300971"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-800300971');
+
+  /* Конверсии Google Ads на реальные действия (анти-бот + дедуп за сессию).
+     Определяем window.on* ДО script.js: там стабы через ||, наши выигрывают. */
+  (function(){
+    var CONV = {
+      phone:    'AW-800300971/PwCKCNL0jvEcEKu_zv0C', // Click to call
+      form:     'AW-800300971/KeWCCP7WjfEcEKu_zv0C', // Submit lead form
+      whatsapp: 'AW-800300971/KFuyCLnijfEcEKu_zv0C'  // Contact (WhatsApp)
+    };
+    var human = false;
+    ['pointerdown','pointermove','touchstart','scroll','keydown','wheel'].forEach(function(ev){
+      window.addEventListener(ev, function(){ human = true; }, { once:true, passive:true });
+    });
+    function isBot(){ return !!navigator.webdriver || !human; }
+    function fire(key){
+      var sendTo = CONV[key];
+      if(!sendTo || typeof gtag !== 'function' || isBot()) return;
+      try{ var k = 'nasteel_conv_' + key; if(sessionStorage.getItem(k)) return; sessionStorage.setItem(k,'1'); }catch(e){}
+      gtag('event','conversion',{ 'send_to':sendTo, 'value':1.0, 'currency':'USD' });
+    }
+    window.onPhoneClick    = function(){ fire('phone'); };
+    window.onWhatsAppClick = function(){ fire('whatsapp'); };
+    window.onLeadSubmit    = function(){ fire('form'); };
+    window.gtag_report_conversion = function(url){
+      fire('phone');
+      if(typeof url !== 'undefined'){ setTimeout(function(){ window.location = url; }, 200); }
+      return false;
+    };
+  })();
+</script>
+
 <title>NASTEEL: казахстанский завод стеллажей, сейфов и металлической мебели полного цикла</title>
 <meta name="description" content="Завод NASTEEL (Алматы, Отеген батыр): проектирование и серийное производство стеллажных систем, сейфов, металлической мебели и банковского оборудования по ГОСТ и СТ-KZ. Собственное КБ, 20+ лет опыта, 26 000+ проектов, доставка по Казахстану.">
 <link rel="canonical" href="https://nasteel.kz/">
