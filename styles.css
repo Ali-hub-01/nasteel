@@ -833,3 +833,42 @@ a.footer-line:hover { color: var(--accent-2); }
 /* ============ Каталог: продуктовый рендер в hero (светлая подложка, без обрезки) ============ */
 .page-hero-media--product { background: #eef2f6; margin: 0; }
 .page-hero-media--product img { object-fit: contain; aspect-ratio: 4 / 3; padding: 20px; }
+
+/* ============ Паллетные: прозрачный hero (без белой карточки) ============ */
+.page-hero-media--plain { background: transparent; border: 0; box-shadow: none; border-radius: 0; overflow: visible; }
+.page-hero-media--plain img { width: 100%; height: auto; object-fit: contain; aspect-ratio: auto; padding: 0;
+  filter: drop-shadow(0 22px 44px rgba(0,0,0,.55)); }
+
+/* ============ Схема / элементы / комплектующие ============ */
+.shema-grid { display: grid; gap: 30px; align-items: center; }
+@media (min-width: 900px) { .shema-grid { grid-template-columns: 1fr 1.05fr; gap: 48px; } }
+.shema-text p { color: #c3cdda; font-size: 16px; line-height: 1.7; margin-bottom: 18px; }
+.section-dark .shema-text .kb-list li { color: #d7deea; }
+.shema-text .kb-list li b { color: #fff; }
+.shema-media { margin: 0; background: #fff; border-radius: var(--radius); padding: 18px;
+  box-shadow: 0 30px 70px -30px rgba(0,0,0,.75); }
+.shema-media img { width: 100%; height: auto; display: block; border-radius: 8px; }
+
+/* ============ Карточки в шахматном порядке ============ */
+.checker { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.checker__ph { margin: 0; border-radius: 16px; overflow: hidden; min-height: 240px; }
+.checker__ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.checker__card { display: flex; flex-direction: column; justify-content: center;
+  padding: 28px; border-radius: 16px; background: var(--paper-2); border: 1px solid rgba(23,32,44,.07); }
+.checker__card h3 { font-family: var(--font-head); font-weight: 700; text-transform: uppercase;
+  font-size: clamp(18px, 2vw, 22px); line-height: 1.15; color: var(--ink); margin-bottom: 12px; }
+.checker__card p { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); }
+.checker__card--accent { background: linear-gradient(135deg, var(--accent-2), var(--accent-deep)); border: 0; }
+.checker__card--accent h3, .checker__card--accent p { color: #fff; }
+.checker__card--accent p { color: #dfeaff; }
+@media (max-width: 860px) { .checker { grid-template-columns: 1fr; } .checker__ph { min-height: 220px; } }
+
+/* ============ Реализованные проекты (горизонтальный скролл) ============ */
+.proj-scroll { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 4px clamp(16px, 5vw, 40px) 18px; -webkit-overflow-scrolling: touch; }
+.proj-scroll img { flex: 0 0 auto; height: 400px; width: auto; border-radius: 14px; object-fit: cover;
+  scroll-snap-align: start; box-shadow: 0 18px 44px -22px rgba(0,0,0,.55); }
+.proj-scroll::-webkit-scrollbar { height: 8px; }
+.proj-scroll::-webkit-scrollbar-thumb { background: rgba(31,111,224,.4); border-radius: 100px; }
+.proj-scroll::-webkit-scrollbar-track { background: rgba(23,32,44,.08); border-radius: 100px; }
+@media (max-width: 560px) { .proj-scroll img { height: 300px; } }
