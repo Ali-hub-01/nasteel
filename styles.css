@@ -872,3 +872,17 @@ a.footer-line:hover { color: var(--accent-2); }
 .proj-scroll::-webkit-scrollbar-thumb { background: rgba(31,111,224,.4); border-radius: 100px; }
 .proj-scroll::-webkit-scrollbar-track { background: rgba(23,32,44,.08); border-radius: 100px; }
 @media (max-width: 560px) { .proj-scroll img { height: 300px; } }
+
+/* ============ Мезонин: SEO-статья ============ */
+.article { max-width: 920px; }
+.article__body p { color: var(--ink-soft); font-size: 16px; line-height: 1.75; margin-bottom: 16px; }
+.article__body h3 { font-family: var(--font-head); font-weight: 700; font-size: clamp(19px, 2.4vw, 26px);
+  color: var(--ink); margin: 32px 0 14px; }
+.article__body .kb-list { margin-bottom: 20px; gap: 12px; }
+.article__body .kb-list li { font-weight: 500; font-size: 15.5px; line-height: 1.6; }
+.article__body .kb-list li b { color: var(--ink); font-weight: 700; }
+.mez-inline { margin: 28px 0; border-radius: 16px; overflow: hidden; box-shadow: 0 22px 54px -26px rgba(0,0,0,.45); }
+.mez-inline img { width: 100%; height: auto; max-height: 520px; object-fit: cover; display: block; }
+.article__cta-note { background: var(--paper-2); border-left: 3px solid var(--accent); border-radius: 12px;
+  padding: 16px 20px; color: var(--ink-soft); }
+.article__cta-note b { color: var(--ink); }
